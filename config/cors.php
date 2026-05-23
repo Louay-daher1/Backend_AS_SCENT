@@ -20,6 +20,7 @@ return [
         '#^http://192\.168\.\d{1,3}\.\d{1,3}:8080$#',
         '#^http://localhost:\d+$#',
         '#^http://127\.0\.0\.1:\d+$#',
+        '#^https://[a-z0-9-]+\.vercel\.app$#',
     ],
 
     'allowed_headers' => ['*'],
