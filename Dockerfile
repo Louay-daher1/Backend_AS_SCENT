@@ -104,7 +104,4 @@ ENV APP_ENV=production \
 
 EXPOSE 8080
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
-    CMD php -r "exit(@file_get_contents('http://127.0.0.1:' . (getenv('PORT') ?: '8080') . '/up') === false);"
-
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
