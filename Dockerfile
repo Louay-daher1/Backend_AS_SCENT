@@ -105,4 +105,6 @@ ENV APP_ENV=production \
 
 EXPOSE 8080
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+# CMD (not ENTRYPOINT) so Railway "Custom Start Command" can be empty;
+# railway.toml also sets startCommand to this script.
+CMD ["/usr/local/bin/entrypoint.sh"]

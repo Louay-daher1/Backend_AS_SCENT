@@ -21,6 +21,10 @@ class AppServiceProvider extends ServiceProvider
     {
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
+            config([
+                'session.secure' => true,
+                'session.same_site' => 'lax',
+            ]);
         }
 
         Schema::defaultStringLength(191);

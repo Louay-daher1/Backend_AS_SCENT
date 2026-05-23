@@ -20,7 +20,7 @@ class CatalogSeeder extends Seeder
 {
     public function run(): void
     {
-        $admin = User::query()->firstOrCreate(
+        $admin = User::query()->updateOrCreate(
             ['email' => env('FILAMENT_ADMIN_EMAIL', 'admin@scentsbyas.com')],
             [
                 'name' => env('FILAMENT_ADMIN_NAME', 'Admin User'),

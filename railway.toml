@@ -6,6 +6,8 @@ builder = "dockerfile"
 dockerfilePath = "Dockerfile"
 
 [deploy]
+# Must match Dockerfile CMD — do not set migrate/seed in the Railway UI start command.
+startCommand = "/usr/local/bin/entrypoint.sh"
 healthcheckPath = "/up"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
