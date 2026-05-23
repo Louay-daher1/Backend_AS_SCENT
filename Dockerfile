@@ -57,8 +57,7 @@ FROM base AS vendor
 
 COPY composer.json composer.lock ./
 
-RUN --mount=type=cache,target=/tmp/composer-cache \
-    composer install \
+RUN composer install \
         --no-dev \
         --no-interaction \
         --prefer-dist \
@@ -72,8 +71,7 @@ FROM vendor AS build
 
 COPY . .
 
-RUN --mount=type=cache,target=/tmp/composer-cache \
-    composer install \
+RUN composer install \
         --no-dev \
         --no-interaction \
         --prefer-dist \
