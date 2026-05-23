@@ -95,7 +95,8 @@ RUN mkdir -p \
     && chmod -R 775 storage bootstrap/cache
 
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh \
+    && chmod +x /usr/local/bin/entrypoint.sh
 
 ENV APP_ENV=production \
     APP_DEBUG=false \
