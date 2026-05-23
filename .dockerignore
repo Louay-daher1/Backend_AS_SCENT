@@ -1,0 +1,54 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies (installed during image build)
+vendor
+node_modules
+
+# Logs & runtime cache
+storage/logs
+storage/logs/**
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/pail
+bootstrap/cache/*.php
+!bootstrap/cache/.gitignore
+
+# Dev & test tooling
+tests
+.phpunit.cache
+.phpunit.result.cache
+phpunit.xml
+pint.json
+_ide_helper.php
+
+# IDE & OS
+.idea
+.vscode
+.cursor
+.codex
+.nova
+.zed
+.phpactor.json
+.DS_Store
+Thumbs.db
+
+# Frontend dev artifacts (not used in API container)
+public/hot
+public/build
+public/fonts-manifest.dev.json
+
+# Docker (avoid invalidating build cache)
+Dockerfile
+docker-compose*.yml
+docker-compose*.yaml
+*.md
+!README.md

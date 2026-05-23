@@ -1,0 +1,12 @@
+# Railway deployment — https://docs.railway.com/reference/config-as-code
+# Set Root Directory to this folder (AS_backend/AS_backend) in the Railway service settings.
+
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/up"
+healthcheckTimeout = 120
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
