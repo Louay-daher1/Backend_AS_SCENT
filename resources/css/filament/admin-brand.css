@@ -1,0 +1,66 @@
+/* Filament does not compile Tailwind classes from custom Blade views — use plain CSS here. */
+
+.fi-logo {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+    height: auto !important;
+    width: auto !important;
+    max-width: 100%;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+}
+
+.fi-sidebar-header-logo-ctn {
+    flex: 0 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.fi-topbar-start .fi-logo {
+    display: inline-flex !important;
+    flex-direction: row !important;
+}
+
+.fi-brand {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    width: auto !important;
+}
+
+.fi-brand-logo {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    border-radius: 30px;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.fi-brand-text {
+    display: inline-block !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    color: rgb(3 7 18) !important;
+}
+
+.dark .fi-brand-text {
+    color: rgb(255 255 255) !important;
+}
+
+.fi-simple-header .fi-logo {
+    margin-bottom: 1rem !important;
+    justify-content: center !important;
+}

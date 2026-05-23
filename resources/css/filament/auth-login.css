@@ -1,0 +1,142 @@
+/* Split login layout */
+
+body:has(.auth-split) .fi-simple-layout,
+body:has(.auth-split) .fi-simple-main-ctn,
+body:has(.auth-split) .fi-simple-main {
+    min-height: 100vh !important;
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body:has(.auth-split) .fi-simple-layout {
+    display: block !important;
+}
+
+.auth-split {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.auth-split-brand {
+    display: none;
+    width: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, #fef3c7 0%, #fde68a 45%, #f59e0b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .auth-split-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.auth-split-brand-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.auth-split-logo {
+    width: 120px;
+    height: 120px;
+    
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.auth-split-brand-name {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #1c1917;
+}
+
+.auth-split-brand-tagline {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(28, 25, 23, 0.75);
+}
+
+.auth-split-form-panel {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: #fff;
+}
+
+.dark .auth-split-form-panel {
+    background: rgb(3 7 18);
+}
+
+.auth-split-form-inner {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.auth-split-mobile-logo {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1.25rem;
+    
+    border-radius: 0.75rem;
+    background: #fef3c7;
+ 
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 1024px) {
+    .auth-split-mobile-logo {
+        display: none;
+    }
+}
+
+.auth-split-form-header {
+    margin-bottom: 1.75rem;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .auth-split-form-header {
+        text-align: left;
+    }
+}
+
+.auth-split-form-heading {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(3 7 18);
+}
+
+.dark .auth-split-form-heading {
+    color: rgb(255 255 255);
+}
+
+.auth-split-form-subheading {
+    margin: 0;
+    font-size: 0.875rem;
+    color: rgb(107 114 128);
+}
+
+.dark .auth-split-form-subheading {
+    color: rgb(156 163 175);
+}
